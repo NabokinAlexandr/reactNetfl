@@ -1,0 +1,35 @@
+.header_cover {
+  height: 500px;
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0.9;
+  z-index: 10;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 2% 0;
+}
+
+.logo {
+  width: 30px;
+  height: 15px;
+  border: 1px solid black;
+}
+
+.bckgrnd_cover {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  border: 1px solid black;
+  background-image: url('../img/header-backgrd.jpg');
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+}

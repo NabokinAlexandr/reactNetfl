@@ -1,0 +1,30 @@
+.item__cover {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.card-body {
+  color: #555555;
+  background-color: #232323;
+}
+
+.item__year {
+  border: 1px solid #555555; 
+}
+
+.edit_cover {
+  position: relative;
+}
+
+#item-edit {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: #232323;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

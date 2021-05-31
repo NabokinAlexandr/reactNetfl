@@ -1,0 +1,11 @@
+.sort__cover {
+  width: 25%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.sort__untuch {
+  color: #555555;
+}

@@ -1,0 +1,49 @@
+.item__cover {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.card-body {
+  color: #555555;
+  background-color: #232323;
+}
+
+.item__year {
+  border: 1px solid #555555; 
+}
+
+.edit_cover {
+  position: relative;
+}
+
+#item-edit {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: #232323;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.card-menu-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 10px;
+  top: 10px;
+  /* z-index: 10; */
+  width: 100px;
+  height: 50px;
+  background-color: #232323;
+  color: white;
+}
+
+.closespan {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #343A40;
+}

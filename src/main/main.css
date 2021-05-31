@@ -1,0 +1,22 @@
+.main {
+  height: 1000px;
+  width: 100%;
+  border: 1px solid black;
+  background-color: #232323;
+}
+
+.main__bar {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
