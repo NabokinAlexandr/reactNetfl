@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import App from '../App';
+import React from 'react';
 import Filter from '../shared/filter/filter';
 import MovieCard from '../shared/movie card/movie-card';
 import Sort from '../shared/sort/sort';

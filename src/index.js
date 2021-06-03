@@ -3,9 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import logger from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';
+import rootReducer from './redux/root.reducer';
+
+const middlewares = [thunkMiddleware, logger];
+const store = createStore(rootReducer, compose(applyMiddleware(...middlewares)));
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 
