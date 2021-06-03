@@ -18,7 +18,7 @@ function HeaderComponent(props) {
           <Logo />
           <ButtonAddMovieComponent onClick={handleShow}/>
         </div>
-        <SearchComponent />
+        <SearchComponent searchMovies={props.searchMovies} />
       </header>
       <PopUpAddMovie isOpen={show} handleClose={handleClose} location={'addForm'}/>
     </>

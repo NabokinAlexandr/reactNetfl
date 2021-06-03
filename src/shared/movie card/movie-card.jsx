@@ -4,6 +4,8 @@ import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
 import PopUpAddMovie from '../popup-add-movie/popup-add-movie';
 import PopUpDeleteMovie from './delete-card/popup-delete-movie';
+import allMovies from '../../mock/mock';
+
 
 function MovieCard(props) {
   
