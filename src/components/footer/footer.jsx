@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import Logo from './../shared/logo/logo';
+import Logo from '../shared/logo/logo';
 
 function FooterComponent(props) {
   return (

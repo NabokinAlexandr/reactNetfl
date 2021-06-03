@@ -1,14 +1,30 @@
 import './App.css';
-import HeaderComponent from './header/header';
-import MainComponent from './main/main';
-import FooterComponent from './footer/footer';
-import React, {useState} from 'react';
-import allMovies from './mock/mock';
-
+import HeaderComponent from './components/header/header';
+import MainComponent from './components/main/main';
+import FooterComponent from './components/footer/footer';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchMovies } from './redux/actions/movies.actions';
 
 function App() {
-
+  const dispatch = useDispatch();
+  const allMovies = useSelector((state) => state.movies.movieList);
   const [moviesData, setMoviesData] = useState(allMovies);
+
+  function getMovies() {
+    dispatch(fetchMovies());
+  }
+  function setMoviesToState(movies) {
+    setMoviesData(movies);
+  }
+  
+  useEffect(getMovies, []);
+  useEffect(
+    function() {
+      setMoviesToState(allMovies);
+    }, 
+    [allMovies]
+  )
   
   function byField(field) {
     return (a, b) => a[field] > b[field] ? -1 : 1;
@@ -29,7 +45,6 @@ function App() {
       if(element.genre.toLocaleLowerCase() === value) {
         return element
       }
-      //return value === 'all' ? a : a.genre.toLocaleLowerCase() === value;
     });
     setMoviesData(result);
   }
@@ -46,10 +61,9 @@ function App() {
 
   function searchMovies(value) {
     const result = allMovies.filter(function(element) {
-      if(element.title.toLocaleLowerCase() === value) {
+      if(element.title.toLocaleLowerCase() === value.toLocaleLowerCase()) {
         return element
       }
-      //return value === 'all' ? a : a.genre.toLocaleLowerCase() === value;
     });
     setMoviesData(result);
   }
